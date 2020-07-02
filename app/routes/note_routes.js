@@ -20,12 +20,12 @@ router.post('/notes', (req, res, next) => {
       place.notes.push(req.body.note)
       return place.save()
     })
-    .then(place => res.status(201).json({place: place}))
+    .then(place => res.status(201).json(place))
     .catch(next)
 })
 
 //Update PATCH note
-router.patch('/places/:place_id/notes/:id', (req, res, next) => {
+router.patch('/places/:place_id/notes/:id', removeBlanks, (req, res, next) => {
   const placeId = req.params.place_id
   Place.findById(placeId)
     .then(handle404)
@@ -44,9 +44,10 @@ router.delete('/places/:place_id/notes/:id', (req, res, next) => {
     .then(handle404)
     .then(place=>{
       place.notes.id(req.params.id).remove()
-      return place.save()
+      place.save()
+      return place
     })
-    .then(() => res.sendStatus(204))
+    .then(place => res.sendStatus(200).json(place))
     .catch(next)
 })
 
