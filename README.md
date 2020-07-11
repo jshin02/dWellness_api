@@ -1,9 +1,12 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# dWellness API: Documentation to handle CRUD requests
 
-# dWellness - Location and Wellness app
+This documentation provides details and instructions for working with the dWellness API.
 
-A template for starting projects with `express` as an API. Includes
-authentication and common middlewares.
+## Important Links
+
+- [Client Repo](https://github.com/jshin02/dWellness)
+- [Deployed API](https://git.heroku.com/damp-shore-57998.git)
+- [Deployed Client](https://jshin02.github.io/dWellness/)
 
 ## API
 
@@ -13,6 +16,14 @@ built-in user authentication documentation.
 
 Scripts are included in [`curl-scripts`](curl-scripts) to test built-in actions.
 Add your own scripts to test your custom API.
+
+### Technologies Used
+
+- express API
+- MongoDB
+- Mongoose
+- Javascript
+- Passport
 
 ### Authentication
 
@@ -275,8 +286,3 @@ Response:
 ```md
 HTTP/1.1 204 No Content
 ```
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
