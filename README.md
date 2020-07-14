@@ -25,6 +25,10 @@ Add your own scripts to test your custom API.
 - Javascript
 - Passport
 
+### Wireframe
+
+![Entity Relationshp Diagram](https://imgur.com/otywGH3)
+
 ### Authentication
 
 | Verb   | URI Pattern            | Controller#Action |
